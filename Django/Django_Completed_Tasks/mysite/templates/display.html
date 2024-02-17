@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Display{% endblock %}
+
+{% block body %}
+<h1>Completed Tasks</h1>
+{% if completed_tasks %}
+<ul>
+    {% for task in completed_tasks %}
+    <li>Title: {{ task.title }}</li>
+    <li>Description: {{ task.description }}</li>
+    <li>Completed on {{ task.completed_at|date:"F j, Y, g:i a" }}</li>
+    <br><br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No completed tasks.</p>
+{% endif %}
+<br><br><br>
+<button onclick="location.href='/'">Go Home</button>
+{% endblock %}

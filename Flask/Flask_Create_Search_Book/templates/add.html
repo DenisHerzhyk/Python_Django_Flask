@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Adding Book</h1>
+<form method="post">
+    <input type="text" class="form-control" id="title" name="title"><br>
+    <textarea class='form-control' id='intro' name='intro'></textarea><br>
+    <input type="submit" class="btn btn-success" value="Add">
+</form>
+
+{% endblock %}

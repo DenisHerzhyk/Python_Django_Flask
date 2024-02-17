@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form method="POST">
+  <input type="text" name="name">
+  <button type="submit">Search</button>
+</form>
+
+{% for article in articles %}
+  <a href="{{ url_for('display_detail', id=article.id) }}">{{ article.title }}</a>
+  <br>
+{% endfor %}
+
+<button onclick="location.href='/'">Go Home</button>
+{% endblock %}

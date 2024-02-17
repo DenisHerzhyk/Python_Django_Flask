@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Display{% endblock %}
+
+{% block body %}
+<ul>
+    {% for client in clients %}
+    <li>Name: {{ client.name }} </li>
+    <li>Surname: {{ client.surname }}</li>
+    <li>Email: {{ client.email }}</li>
+    <li>Phone Number: {{ client.number }}</li>
+    <li>Living in:{{ client.address }}</li>
+    <button onclick="location.href='/'">Go Home</button><br><br><br>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+
+
